@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hero">What is your Name</h1>
+    <h2 id="hero2">Address =</h2>
+    <h2></h2>
+
+        <button onclick="change()">change</button> 
+    <script>
+        function change(hero) {
+            name = "rohit"
+            document.getElementById("hero").innerHTML=name
+            document.getElementById("hero").innerText="My Name is Rohit"
+            document.getElementById("hero2").innerHTML="Address"
+            document.getElementById("hero2").innerText="Abohar"
+        }
+    </script>
+</body>
+</html>
