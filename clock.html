@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, #263b43, #111b20);
+        }
+
+        #time {
+            width: min(500px, calc(100% - 40px));
+            height: 200px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #384b4a;
+            border-radius: 24px;
+            background: #101816;
+            color: #75ffb2;
+            font-family: "Courier New", monospace;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-shadow: 0 0 8px #42ff9a, 0 0 22px #20c86b;
+            box-shadow: 0 0 30px #0008, inset 0 0 28px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="time">00:00:00</h1>
+    <script>
+        function clock(){
+            time = new Date();
+            hours = time.getHours();
+            minutes = time.getMinutes();
+            secounds = time.getSeconds();
+
+            document.getElementById("time").innerHTML = hours+":"+minutes+":"+secounds;
+
+            setTimeout(clock,1000);
+        }
+        clock();
+    </script>
+</body>
+</html>

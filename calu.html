@@ -1,0 +1,118 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     body {
+    font-family: Arial, sans-serif;
+    background: rgb(133, 149, 149);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background: rgb(202, 193, 193);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+h3 {
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <h2>Calculator</h2>
+
+        <input type="number" id="box1" placeholder="Enter first number">
+        <input type="number" id="box2" placeholder="Enter second number">
+
+        <div class="buttons">
+            <button onclick="add()">Add</button>
+            <button onclick="subtract()">Subtract</button>
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+
+        <h3>Result: <span id="result">0</span></h3>
+    </div>
+
+    <script>
+        function getNumbers() {
+     num1 = (document.getElementById("box1").value);
+     num2 = (document.getElementById("box2").value);
+
+    return [num1, num2];
+}
+
+function add() {
+     [box1, box2] = getNumbers();
+    document.getElementById("result").textContent = box1 + box2;
+}
+
+function subtract() {
+     [box1, box2] = getNumbers();
+    document.getElementById("result").textContent = box1 - box2;
+}
+
+function multiply() {
+     [box1, box2] = getNumbers();
+    document.getElementById("result").textContent = box1 * box2;
+}
+
+function divide() {
+     [box1, box2] = getNumbers();
+
+    if (box2 === 0) {
+        document.getElementById("result").textContent = "Cannot divide by 0";
+    } else {
+        document.getElementById("result").textContent = box1 / box2;
+    }
+}
+    </script>
+</body>
+</html>
