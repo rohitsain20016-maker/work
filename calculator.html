@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f2a44, #3b4d7a, #6a7fc2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin: 0 0 24px;
+            letter-spacing: 1px;
+        }
+
+        .card2 {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 18px;
+            padding: 32px 26px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            color: #edf3ff;
+        }
+
+        .card2 input {
+            width: 100%;
+            padding: 14px 14px;
+            margin: 8px 0 14px;
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card2 input::placeholder {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .card2 input:focus {
+            border-color: #9ec5ff;
+            box-shadow: 0 0 0 3px rgba(158, 197, 255, 0.25);
+        }
+
+        .card2 button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #7dd3fc, #3b82f6);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 8px 22px rgba(59, 130, 246, 0.45);
+        }
+
+        .card2 button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px rgba(59, 130, 246, 0.55);
+        }
+
+        #pwText {
+            margin-top: 18px;
+            text-align: center;
+            min-height: 24px;
+            font-weight: 600;
+            color: #dff5ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="calculator">
+        <h2>Calculator</h2>
+        <input type="number" id="box1" placeholder="Enter first number">
+        <input type="number" id="box2" placeholder="Enter second number">
+        <div class="buttons">
+            <button onclick="add('+')">Add</button>
+            <button onclick="add('-')">Subtract</button>
+            <button onclick="add('*')">Multiply</button>
+            <button onclick="add('/')">Divide</button>
+        </div>
+
+        <h3>Result: <span id="result">0</span></h3>
+    </div> -->
+
+    <!-- /// -->
+
+     <h1>Registration</h1>
+            <div class="card2">
+                Name: <input type="text" id="uname"><br><br>
+                Password: <input type="password" id="pw1"><br><br>
+                Confirm: <input type="password" id="pw2"><br><br>
+                <button onclick="checkPw()">Submit</button>
+                <p id="pwText"></p>
+            </div>
+     <script>
+        
+        // function add(sign) {
+        //     var first = Number(document.getElementById("box1").value);
+        //     var second = Number(document.getElementById("box2").value);
+        //     var answer;ation</h1>
+        //     <div class="card2">
+        //     if (sign == "+") {ype="text" id="uname"><br><br>
+        //         answer = first + second;assword" id="pw1"><br><br>
+        //         }onfirm: <input type="password" id="pw2"><br><br>
+        //     else if (sign == "-") {eckPw()">Submit</button>
+        //         answer = first - second;
+        //         }>
+        //         else if (sign == "*") {
+        //             answer = first * second;
+        //     }ar a = document.getElementById("pw1").value;
+        //     else {= document.getElementById("pw2").value;
+        //         answer = first / second;yId("pwText");
+        //     }
+        //     if(a !== b){
+        //     document.getElementById("result").innerText = "Result: " + answer;
+        //     }else{
+
+
+
+
+
+                function checkPw(){
+            var a = document.getElementById("pw1").value;
+            var b = document.getElementById("pw2").value;
+            var t = document.getElementById("pwText");
+        
+            if(a !== b){
+            t.innerText = "Password does not match";
+            }else{
+            t.innerText = "Password matched";
+            }
+            }
+        </script> 
+            
+
+
+    
+           
+         
+
+
+</body>
+
+</html>
